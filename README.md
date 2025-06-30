@@ -35,14 +35,21 @@ Fix: Added SQLAlchemy models and DB session to log each analysis.
 **6.**Other minor issues included missing memory flags for agents, incorrect import usage, and poor formatting of tool functions. Agents were improved by making sure their tool methods were instantiated properly and not accessed as class attributes. Additionally, imports were cleaned up and modularization was done for better file organization.
 
 # Technologies Used
-**1.**FastAPI
-**2.**CrewAI
-**3.**Langchain
-**4.**OpenAI GPT (via langchain_openai)
-**5.**SQLite3 with SQLAlchemy ORM
-**6.**Uvicorn
-**7.**Pydantic
-**8.**Python 3.10
+1.FastAPI
+
+2.CrewAI
+
+3.Langchain
+
+4.OpenAI GPT (via langchain_openai)
+
+5.SQLite3 with SQLAlchemy ORM
+
+6.Uvicorn
+
+7.Pydantic
+
+8.Python 3.10
 
 ## Getting Started
 
