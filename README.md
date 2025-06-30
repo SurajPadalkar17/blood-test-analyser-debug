@@ -11,28 +11,28 @@ Modular architecture with clearly separated agents, tasks, tools, and database l
 
 # Bugs Identified & Fixes
 
-**1.**CrewAI Tool Integration Issue
+1.CrewAI Tool Integration Issue
 Bug: Tools used in agents were not compatible with CrewAI v0.30+ structure.
 Fix: Refactored tools using proper Tool structure from Langchain and connected to CrewAI via tools=[tool_instance].
 
-**2.**PDF Parsing Error
+2.PDF Parsing Error
 Bug: Old versions of Langchain used deprecated PDF loaders.
 Fix: Replaced PyPDFLoader with updated import:
 from langchain_community.document_loaders import PyPDFLoader.
 
-**3.**Environment Variables
+3.Environment Variables
 Bug: Missing OpenAI API key handling
 Fix: Environment variable check using os.getenv("OPENAI_API_KEY").
 
-**4.**Circular Import in Celery
+4.Circular Import in Celery
 Bug: Importing run_crew from main.py inside Celery task caused circular import.
 Fix: Moved run_crew function to crew_runner.py to decouple main app from logic.
 
-**5.**Database Not Storing Results
+5.Database Not Storing Results
 Bug: No DB layer for storing results.
 Fix: Added SQLAlchemy models and DB session to log each analysis.
 
-**6.**Other minor issues included missing memory flags for agents, incorrect import usage, and poor formatting of tool functions. Agents were improved by making sure their tool methods were instantiated properly and not accessed as class attributes. Additionally, imports were cleaned up and modularization was done for better file organization.
+6.Other minor issues included missing memory flags for agents, incorrect import usage, and poor formatting of tool functions. Agents were improved by making sure their tool methods were instantiated properly and not accessed as class attributes. Additionally, imports were cleaned up and modularization was done for better file organization.
 
 # Technologies Used
 1.FastAPI
