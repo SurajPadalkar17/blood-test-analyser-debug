@@ -46,20 +46,35 @@ Other minor issues included missing memory flags for agents, incorrect import us
 
 **Setup Instructions**
 1.Clone the repository
+
 git clone https://github.com/SurajPadalkar17/blood-test-analyser-debug
+
 2.cd blood-test-analyzer
+
 3.Create a virtual environment and activate
+
 4.python -m venv venv
+
 5.venv\Scripts\activate  # For Windows
+
 6.Install dependencies
+
 7.pip install -r requirements.txt
+
 8.Set environment variable
+
 9.set OPENAI_API_KEY=your_openai_key_here 
+
 10.Run the FastAPI server
+
 11.uvicorn main:app --reload
+
 12.Access the API
+
 13.Go to: http://localhost:8000/docs
+
 14.Upload a PDF and query using the /analyze endpoint
+
 
 **Project Structure**
 The codebase is divided into several key modules. The agents are defined in agents.py and include the Doctor, Verifier, Nutritionist, and Exercise Specialist. The tools used by these agents are defined in tools.py. The task definitions used by the CrewAI system are in task.py. Database setup is handled in db.py and models.py, and the main application logic is in main.py.
